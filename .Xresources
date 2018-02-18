@@ -1,0 +1,66 @@
+! Xft settings
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+
+! URxvt settings
+URxvt.depth:                32
+!URxvt.geometry:             90x30
+!URxvt.loginShell:           true
+!URxvt.internalBorder:       3
+!URxvt.lineSpace:            0
+
+URxvt*transparent: false
+URxvt*saveLines: 12000
+
+URxvt.font: xft:Inconsolata-12
+
+! special
+URxvt*.foreground:   #f1ebeb
+URxvt*.background:   [80]#272822
+URxvt*.cursorColor:  #f1ebeb
+
+! black
+URxvt*color0:       #48483e
+URxvt*color8:       #76715e
+
+! red
+URxvt*color1:       #dc2566
+URxvt*color9:       #fa2772
+
+! green
+URxvt*color2:       #8fc029
+URxvt*color10:      #a7e22e
+
+! yellow
+URxvt*color3:       #d4c96e
+URxvt*color11:      #e7db75
+
+! blue
+URxvt*color4:       #55bcce
+URxvt*color12:      #66d9ee
+
+! magenta
+URxvt*color5:       #9358fe
+URxvt*color13:      #ae82ff
+
+! cyan
+URxvt*color6:       #56b7a5
+URxvt*color14:      #66efd5
+
+! white
+URxvt*color7:       #acada1
+URxvt*color15:      #cfd0c2
+
+
+! scrollbar - true (default) or false
+URxvt*scrollBar: true
+
+! scrollbar position - left=false (default) or right=true
+URxvt*scrollBar_right: false
+
+! scrollbar style - rxvt (default), plain, next, or xterm
+URxvt*scrollstyle: plain
