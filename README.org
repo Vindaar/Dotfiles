@@ -1,4 +1,4 @@
 This repository contains dotfiles of mine to keep them in sync.
 
 The color scheme in the [[file:.Xresources][Xresources]] is based on the Monokai theme and
-was created using [[https:terminal.sexy]].
+was created using [[https://terminal.sexy]].
