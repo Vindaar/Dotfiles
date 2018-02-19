@@ -1,7 +1,7 @@
 # adapted from https://github.com/zanshin/dotfiles/blob/master/zsh/prompt.zsh
 
 function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo %{$fg[default]%}'γ' && return
+    git branch >/dev/null 2>/dev/null && echo %{$fg[default]%}'ツ' && return
     echo %{$fg[default]%}'λ'
 }
 
@@ -29,7 +29,7 @@ function parse_git_branch() {
 }
 
 function current_pwd {
-  echo $(pwd | sed -e "s,^$HOME,~,")
+  echo $(pwd | sed -e "s,^$HOME,~/,")
 }
 
-PROMPT='${PR_BLUE}%n%{$reset_color%}%{$FG[239]%} at %{$reset_color%}${PR_BOLD_RED}$(box_name)%{$reset_color%} ${PR_BOLD_MAGENTA}$(current_pwd)%{$reset_color%} $(prompt_char) '
+PROMPT='${PR_BLUE}%n%{$reset_color%}%{$FG[239]%} at %{$reset_color%}${PR_BOLD_RED}$(box_name)%{$reset_color%} in ${PR_BOLD_MAGENTA}$(current_pwd)%{$reset_color%} $(prompt_char) '
