@@ -1,0 +1,5 @@
+Adds configuration files for =zsh=. Mostly based on
+
+https://github.com/zanshin/dotfiles/tree/master/zsh
+
+applied to me and leaving out many things I don't need.
