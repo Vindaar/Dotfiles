@@ -15,3 +15,5 @@ alias lsd='ls -aFhlG --color'
 alias l='ls -al --color'
 alias ls='ls -GFh --color' # Colorize output, add file type indicator, and put sizes in human readable format
 alias ll='ls -GFhl --color' # Same as above, but in long listing format
+
+alias grep='grep --color'
