@@ -40,8 +40,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 # set terminal to 256 colors
 export TERM=xterm-256color
-export CLICOLOR=1
-export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 # set up zsh behaviour such that `/` separated also counts as a word,
 # which can be killed with M-d

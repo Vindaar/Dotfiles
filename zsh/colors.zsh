@@ -14,14 +14,11 @@ export PR_RED PR_GREEN PR_YELLOW PR_BLUE PR_WHITE PR_BLACK
 export PR_BOLD_RED PR_BOLD_GREEN PR_BOLD_YELLOW PR_BOLD_BLUE 
 export PR_BOLD_WHITE PR_BOLD_BLACK
 
-# Clear LSCOLORS
-unset LSCOLORS
+# Clear LS_COLORS
+unset LS_COLORS
 
-# Main change, you can see directories on a dark background
-#expor tLSCOLORS=gxfxcxdxbxegedabagacad
+eval $(dircolors -b)
+# change color of o+w directories (rw mounted NTFS disks)
+export LS_COLORS="$LS_COLORS:ow=1;37;100"
+export LS_COLORS=`echo $LS_COLORS | sed -r 's|:ow[=0-9;]*||'`
 
-if [[ $IS_LINUX -eq 1 ]]; then
-    #LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
-    #export LS_COLORS
-    eval $(dircolors -b /etc/DIR_COLORS.256color)
-fi
