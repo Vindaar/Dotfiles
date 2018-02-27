@@ -45,3 +45,5 @@ export TERM=xterm-256color
 # which can be killed with M-d
 export WORDCHARS=''
 
+# add fzf to path
+export PATH=$PATH:$HOME/src/fzf/fzf/bin/
