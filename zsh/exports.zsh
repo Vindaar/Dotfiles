@@ -1,5 +1,5 @@
 # define home directory. change depending on machine
-HOME=/home/basti/
+# HOME=/home/basti/
 
 
 export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH 

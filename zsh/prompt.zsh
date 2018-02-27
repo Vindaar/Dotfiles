@@ -29,7 +29,7 @@ function parse_git_branch() {
 }
 
 function current_pwd {
-  echo $(pwd | sed -e "s,^$HOME,~/,")
+  echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
 PROMPT='${PR_BLUE}%n%{$reset_color%}%{$FG[239]%} at %{$reset_color%}${PR_BOLD_RED}$(box_name)%{$reset_color%} in ${PR_BOLD_MAGENTA}$(current_pwd)%{$reset_color%} $(prompt_char) '
