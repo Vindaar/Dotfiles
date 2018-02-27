@@ -46,4 +46,4 @@ export TERM=xterm-256color
 export WORDCHARS=''
 
 # add fzf to path
-export PATH=$PATH:$HOME/src/fzf/fzf/bin/
+export PATH=$PATH:$HOME/src/fzf/bin/
