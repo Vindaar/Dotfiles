@@ -47,3 +47,6 @@ export WORDCHARS=''
 
 # add fzf to path
 export PATH=$PATH:$HOME/src/fzf/bin/
+
+# export path for rclone
+export PATH=$PATH:$HOME/src/rclone/rclone-v1.33-linux-amd64
