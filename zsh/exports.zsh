@@ -50,3 +50,8 @@ export PATH=$PATH:$HOME/src/fzf/bin/
 
 # export path for rclone
 export PATH=$PATH:$HOME/src/rclone/rclone-v1.33-linux-amd64
+# export undervolt tool
+export PATH=$PATH:$HOME/src/nim/undervoltIntel/
+
+# add org/Code/Scripts to PATH
+export PATH=$PATH:$HOME/org/Code/Scripts/
