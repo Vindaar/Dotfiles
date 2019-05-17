@@ -17,3 +17,5 @@ alias ls='ls -GFh --color' # Colorize output, add file type indicator, and put s
 alias ll='ls -GFhl --color' # Same as above, but in long listing format
 
 alias grep='grep --color'
+
+alias emacs='emacsclient -nc'
