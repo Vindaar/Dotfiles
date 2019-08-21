@@ -34,6 +34,9 @@ if [ -x /usr/bin/blueman-applet ] ; then
     blueman-applet &
 fi
 
+# set the PATH variable
+source $HOME/.zsh/exports.zsh
+
 # the following taken from
 # https://wiki.manjaro.org/index.php/Getting_Window_Managers_to_work_properly
 # Without it we get (even more) errors when running chrome, e.g. when plotly
