@@ -2,7 +2,7 @@
 # HOME=/home/basti/
 
 
-export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH 
+export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
 export PATH=$HOME/Documents/android/platform-tools/:$PATH
 # SDSS related paths
 export PATH=/usr/local/src/fv5.3/:$PATH
@@ -29,7 +29,7 @@ export PYTHONPATH=$HOME/SDSS_indie/Python/MachineLearning/:$PYTHONPATH
 # add rclone path to PATH
 export PATH=$HOME/src/rclone:$PATH
 
-# add lein (for clojure) 
+# add lein (for clojure)
 export PATH=$HOME/src/lein:$PATH
 
 # add nim to PATH
@@ -55,3 +55,6 @@ export PATH=$PATH:$HOME/src/nim/undervoltIntel/
 
 # add org/Code/Scripts to PATH
 export PATH=$PATH:$HOME/org/Code/Scripts/
+
+# add NTangle to PATH
+export PATH=$PATH:$HOME/src/nim/ntangle
