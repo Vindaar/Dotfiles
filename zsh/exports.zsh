@@ -38,8 +38,10 @@ export PATH=$HOME/.nimble/bin:$PATH
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
-# set terminal to 256 colors
-export TERM=xterm-256color
+# set terminal to 256 colors if not in TTY
+if [ "$TERM" != "linux" ]; then
+    export TERM=xterm-256color
+fi
 
 # set up zsh behaviour such that `/` separated also counts as a word,
 # which can be killed with M-d
