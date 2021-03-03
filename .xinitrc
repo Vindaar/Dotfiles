@@ -4,6 +4,14 @@ xsettingsd &
 # set correct keyboard layout
 loadkeys neo
 
+# # on laptop
+# # run xsettingsd
+# /home/basti/src/xsettingsd/xsettingsd &
+#
+# # set cursor to regular arrow
+# xsetroot -cursor_name left_ptr
+
+
 # set keyboard layout in X
 setxkbmap de neo
 
