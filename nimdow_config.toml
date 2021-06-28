@@ -20,6 +20,11 @@ command = "st zsh"
 keys = [ "Return" ]
 modifiers = [ "super" ]
 
+[[startProcess]]
+command = "flameshot gui"
+keys = [ "F2" ]
+modifiers = [ "super" ]
+
 [autostart]
 exec = [
   "xsetroot -cursor_name left_ptr",
