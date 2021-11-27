@@ -1,40 +1,6 @@
-# define home directory. change depending on machine
-# HOME=/home/basti/
-
-
-export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
-export PATH=$HOME/Documents/android/platform-tools/:$PATH
-# SDSS related paths
-export PATH=/usr/local/src/fv5.3/:$PATH
-export PATH=/usr/local/src/ds9_64/:$PATH
-export PGPLOT_DIR=/usr/local/pgplot
-export PATH=$PATH:/usr/local/pgplot
-
-# ROOT related
-export ROOTSYS=/usr/local/src/root/5.34.14
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOTSYS/lib
-export PATH=$PATH:$ROOTSYS/bin
-
-# export CUDA path, change depening on machine
-export PATH=/usr/local/cuda-6.5/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64:$LD_LIBRARY_PATH
-
-# export bin directory in home, contains e.g. topcat
-export PATH=$HOME/bin:$PATH
-
-# Python Path, location of SDSS files
-export PYTHONPATH=$HOME/SDSS_indie/Python/develop/:$PYTHONPATH
-export PYTHONPATH=$HOME/SDSS_indie/Python/MachineLearning/:$PYTHONPATH
-
-# add rclone path to PATH
-export PATH=$HOME/src/rclone:$PATH
-
-# add lein (for clojure)
-export PATH=$HOME/src/lein:$PATH
-
 # add nim to PATH
-export PATH=$HOME/src/nim/nim_git_repo/bin:$PATH
-export PATH=$HOME/.nimble/bin:$PATH
+path+=/.nimble/bin
+path+=$HOME/src/nim/nim_git_repo/bin
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
@@ -48,15 +14,23 @@ fi
 export WORDCHARS=''
 
 # add fzf to path
-export PATH=$PATH:$HOME/src/fzf/bin/
+path+=$HOME/src/fzf/bin/
 
 # export path for rclone
-export PATH=$PATH:$HOME/src/rclone/rclone-v1.33-linux-amd64
+path+=$HOME/src/rclone/rclone-v1.33-linux-amd64
 # export undervolt tool
-export PATH=$PATH:$HOME/src/nim/undervoltIntel/
+path+=$HOME/src/nim/undervoltIntel/
 
 # add org/Code/Scripts to PATH
-export PATH=$PATH:$HOME/org/Code/Scripts/
+path+=$HOME/org/Code/Scripts/
 
 # add NTangle to PATH
-export PATH=$PATH:$HOME/src/nim/ntangle
+path+=$HOME/src/nim/ntangle
+
+# add CUDA to PATH (see void notes for installation instructions)
+path+=/usr/local/cuda/bin
+
+# add path to TPA binaries
+path+=$HOME/CastData/ExternCode/TimepixAnalysis/bin
+
+typeset -aU path
