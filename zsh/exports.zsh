@@ -34,3 +34,6 @@ path+=/usr/local/cuda/bin
 path+=$HOME/CastData/ExternCode/TimepixAnalysis/bin
 
 typeset -aU path
+
+# set CLIGEN width variable to 80 columns
+export CLIGEN_WIDTH=80
