@@ -1,6 +1,6 @@
 # HISTORY
-HISTSIZE=10000
-SAVEHIST=9000
+HISTSIZE=10000000
+SAVEHIST=$HISTSIZE
 HISTFILE=~/.zsh_history
 
 # better history management, using partial term and arrow keys
