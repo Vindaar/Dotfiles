@@ -1,6 +1,6 @@
 # add nim to PATH
-path+=/.nimble/bin
 path+=$HOME/src/nim/nim_git_repo/bin
+path+=$HOME/.nimble/bin
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
