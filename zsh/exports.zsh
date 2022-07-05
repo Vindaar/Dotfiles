@@ -13,16 +13,15 @@ fi
 # which can be killed with M-d
 export WORDCHARS=''
 
-# add fzf to path
-path+=$HOME/src/fzf/bin/
+# add HDFview to PATH
+path+=$HOME/src/hdfview/HDFView/3.0.0
 
-# export path for rclone
-path+=$HOME/src/rclone/rclone-v1.33-linux-amd64
 # export undervolt tool
 path+=$HOME/src/nim/undervoltIntel
 
-# add org/Code/Scripts to PATH
-path+=$HOME/org/Code/Scripts
+# add brave to PATH
+path+=$HOME/src/brave
+
 
 # add ntangle to PATH
 path+=$HOME/src/nim/ntangle
