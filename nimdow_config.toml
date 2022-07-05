@@ -16,9 +16,14 @@ keys = [ "p" ]
 modifiers = [ "super" ]
 
 [[startProcess]]
-command = "st zsh"
+command = "st_dark"
 keys = [ "Return" ]
 modifiers = [ "super" ]
+
+[[startProcess]]
+command = "st_light"
+keys = [ "Return" ]
+modifiers = [ "super", "shift" ]
 
 [[startProcess]]
 command = "flameshot gui"

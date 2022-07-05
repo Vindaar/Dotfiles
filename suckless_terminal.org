@@ -16,21 +16,21 @@ Then modify =config.def.h=:
 /* See LICENSE file for copyright and license details. */
 
 /*
- * appearance
- *
- * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
- */
+ ,* appearance
+ ,*
+ ,* font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+ ,*/
 static char *font = "Inconsolata:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
- * What program is execed by st depends of these precedence rules:
- * 1: program passed with -e
- * 2: scroll and/or utmp
- * 3: SHELL environment variable
- * 4: value of shell in /etc/passwd
- * 5: value of shell in config.h
- */
+ ,* What program is execed by st depends of these precedence rules:
+ ,* 1: program passed with -e
+ ,* 2: scroll and/or utmp
+ ,* 3: SHELL environment variable
+ ,* 4: value of shell in /etc/passwd
+ ,* 5: value of shell in config.h
+ ,*/
 static char *shell = "/bin/zsh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
@@ -45,10 +45,10 @@ static float cwscale = 1.0;
 static float chscale = 1.0;
 
 /*
- * word delimiter string
- *
- * More advanced example: L" `'\"()[]{}"
- */
+ ,* word delimiter string
+ ,*
+ ,* More advanced example: L" `'\"()[]{}"
+ ,*/
 wchar_t *worddelimiters = L" ";
 
 /* selection timeouts (in milliseconds) */
@@ -63,94 +63,103 @@ int allowaltscreen = 1;
 int allowwindowops = 0;
 
 /*
- * draw latency range in ms - from new content/keypress/etc until drawing.
- * within this range, st draws when content stops arriving (idle). mostly it's
- * near minlatency, but it waits longer for slow updates to avoid partial draw.
- * low minlatency will tear/flicker more, as it can "detect" idle too early.
- */
+ ,* draw latency range in ms - from new content/keypress/etc until drawing.
+ ,* within this range, st draws when content stops arriving (idle). mostly it's
+ ,* near minlatency, but it waits longer for slow updates to avoid partial draw.
+ ,* low minlatency will tear/flicker more, as it can "detect" idle too early.
+ ,*/
 static double minlatency = 8;
 static double maxlatency = 33;
 
 /*
- * blinking timeout (set to 0 to disable blinking) for the terminal blinking
- * attribute.
- */
+ ,* blinking timeout (set to 0 to disable blinking) for the terminal blinking
+ ,* attribute.
+ ,*/
 static unsigned int blinktimeout = 800;
 
 /*
- * thickness of underline and bar cursors
- */
+ ,* thickness of underline and bar cursors
+ ,*/
 static unsigned int cursorthickness = 2;
 
 /*
- * bell volume. It must be a value between -100 and 100. Use 0 for disabling
- * it
- */
+ ,* bell volume. It must be a value between -100 and 100. Use 0 for disabling
+ ,* it
+ ,*/
 static int bellvolume = 0;
 
 /* default TERM value */
 char *termname = "st-256color";
 
 /*
- * spaces per tab
- *
- * When you are changing this value, don't forget to adapt the »it« value in
- * the st.info and appropriately install the st.info in the environment where
- * you use this st version.
- *
- *	it#$tabspaces,
- *
- * Secondly make sure your kernel is not expanding tabs. When running `stty
- * -a` »tab0« should appear. You can tell the terminal to not expand tabs by
- *  running following command:
- *
- *	stty tabs
- */
-unsigned int tabspaces = 8;
+ ,* spaces per tab
+ ,*
+ ,* When you are changing this value, don't forget to adapt the »it« value in
+ ,* the st.info and appropriately install the st.info in the environment where
+ ,* you use this st version.
+ ,*
+ ,*	it#$tabspaces,
+ ,*
+ ,* Secondly make sure your kernel is not expanding tabs. When running `stty
+ ,* -a` »tab0« should appear. You can tell the terminal to not expand tabs by
+ ,*  running following command:
+ ,*
+ ,*	stty tabs
+ ,*/
+unsigned int tabspaces = 4;
 
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+    /* /\* 8 normal colors *\/ */
+    [0] =	"#272822",
+    [1] =	"#f92672",
+    [2] =	"#a6e22e",
+    [3] =	"#f4bf75",
+    [4] =	"#66d9ef",
+    [5] =	"#ae81ff",
+    [6] =	"#a1efe4",
+    [7] =	"#f8f8f2",
+    /* 8 dark colors */
+    [8] =	"#75715e",
+    [9] =	"#f92672",
+    [10] =	"#a6e22e",
+    [11] =	"#f4bf75",
+    [12] =	"#66d9ef",
+    [13] =	"#ae81ff",
+    [14] =	"#a1efe4",
+    [15] =	"#f9f8f5",
 
-  /* 8 normal colors */
-  [0] = "#272822", /* black   */
-  [1] = "#f92672", /* red     */
-  [2] = "#a6e22e", /* green   */
-  [3] = "#f4bf75", /* yellow  */
-  [4] = "#66d9ef", /* blue    */
-  [5] = "#ae81ff", /* magenta */
-  [6] = "#a1efe4", /* cyan    */
-  [7] = "#f8f8f2", /* white   */
+    [255] =     0,
 
-  /* 8 bright colors */
-  [8]  = "#75715e", /* black   */
-  [9]  = "#f92672", /* red     */
-  [10] = "#a6e22e", /* green   */
-  [11] = "#f4bf75", /* yellow  */
-  [12] = "#66d9ef", /* blue    */
-  [13] = "#ae81ff", /* magenta */
-  [14] = "#a1efe4", /* cyan    */
-  [15] = "#f9f8f5", /* white   */
-
-  /* special colors */
-  [256] = "#272822", /* background */
-  [257] = "#f8f8f2", /* foreground */
+    /* more colors can be added after 255 to use with DefaultXX */
+    [256] =	"#cccccc",
+    [257] =	"#555555",
+    [258] =	"gray90", /* default foreground colour */
+    [259] =	"black", /* default background colour */
+    /* special colors */
+    [260] =     "#272822", /* background */
+    [261] =     "#f8f8f2", /* foreground */
 };
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor
+ * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-unsigned int defaultcs = 257;
-
+unsigned int defaultfg = 261;
+unsigned int defaultbg = 260;
+unsigned int defaultcs = 256;
 /*
- * Colors used, when the specific fg == defaultfg. So in reverse mode this
- * will reverse too. Another logic would only make the simple feature too
- * complex.
- */
+ ,* Colors used, when the specific fg == defaultfg. So in reverse mode this
+ ,* will reverse too. Another logic would only make the simple feature too
+ ,* complex.
+ ,*/
 static unsigned int defaultitalic = 7;
 static unsigned int defaultunderline = 7;
 static unsigned int defaultrcs = 257;
 #+end_src
+
+
+Note:
+use the [[terminal_themes.nim]] tool to generate a =st_dark= and
+=st_light= binary!
