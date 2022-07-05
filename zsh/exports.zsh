@@ -32,7 +32,6 @@ path+=/usr/local/cuda/bin
 # add st to PATH
 path+=$HOME/src/st
 
-# add path to TPA binaries
 # add nimdow to PATH
 path+=$HOME/src/nim/nimdow/bin
 
