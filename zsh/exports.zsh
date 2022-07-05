@@ -28,6 +28,8 @@ path+=$HOME/src/nim/ntangle
 
 # add CUDA to PATH (see void notes for installation instructions)
 path+=/usr/local/cuda/bin
+# add mini tools to PATH
+path+=$HOME/org/Code/Scripts
 
 # add st to PATH
 path+=$HOME/src/st
