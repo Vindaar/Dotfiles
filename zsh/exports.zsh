@@ -19,18 +19,24 @@ path+=$HOME/src/fzf/bin/
 # export path for rclone
 path+=$HOME/src/rclone/rclone-v1.33-linux-amd64
 # export undervolt tool
-path+=$HOME/src/nim/undervoltIntel/
+path+=$HOME/src/nim/undervoltIntel
 
 # add org/Code/Scripts to PATH
-path+=$HOME/org/Code/Scripts/
+path+=$HOME/org/Code/Scripts
 
-# add NTangle to PATH
+# add ntangle to PATH
 path+=$HOME/src/nim/ntangle
 
 # add CUDA to PATH (see void notes for installation instructions)
 path+=/usr/local/cuda/bin
 
+# add st to PATH
+path+=$HOME/src/st
+
 # add path to TPA binaries
+# add nimdow to PATH
+path+=$HOME/src/nim/nimdow/bin
+
 path+=$HOME/CastData/ExternCode/TimepixAnalysis/bin
 
 typeset -aU path
