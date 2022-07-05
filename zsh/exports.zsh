@@ -37,6 +37,7 @@ path+=$HOME/src/st
 # add nimdow to PATH
 path+=$HOME/src/nim/nimdow/bin
 
+# export TimepixAnalysis bin directory
 path+=$HOME/CastData/ExternCode/TimepixAnalysis/bin
 
 typeset -aU path
