@@ -38,6 +38,9 @@ path+=$HOME/src/nim/nimdow/bin
 # export TimepixAnalysis bin directory
 path+=$HOME/CastData/ExternCode/TimepixAnalysis/bin
 
+# set XMODIFIERS to empty to avoid emacs not seeing some modifiers
+export XMODIFIERS=''
+
 typeset -aU path
 
 # set CLIGEN width variable to 80 columns
